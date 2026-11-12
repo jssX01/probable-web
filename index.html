@@ -1,9 +1,300 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Webku</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f2e7">
+  <meta name="description" content="CRAWLA Colorwave — discover music, explore tracks, and play your favorites.">
+  <title>CRAWLA® — Colorwave Radio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-  <h1>Halo dunia</h1>
+  <header class="navbar">
+    <a href="#home" class="brand">CRAW<span>LA</span><sup>®</sup></a>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#music">Music</a>
+      <a href="#player">Player</a>
+      <a href="#about">About</a>
+    </nav>
+
+    <a class="spotify-pill" href="https://open.spotify.com/search/CRAWLA"
+       target="_blank" rel="noopener noreferrer">
+      <span class="live-dot"></span> SPOTIFY ↗
+    </a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="line"></span> INDEPENDENT SOUND CULTURE</p>
+
+        <h1>FEEL THE<br><span class="outlined">COLOR</span><span class="period">.</span></h1>
+
+        <p class="hero-description">
+          Welcome to CRAWLA Colorwave. A space for sounds, feelings,
+          and songs that stay in your head long after the music stops.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="button button-coral" href="#music">EXPLORE MUSIC ↓</a>
+          <a class="button button-outline" href="#player">LISTEN NOW ↗</a>
+        </div>
+
+        <div class="hero-caption">
+          <span>VOL. 001</span>
+          <span>MADE FOR YOUR FREQUENCY.</span>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Abstract CRAWLA artwork">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-sun"></div>
+        <div class="art-letter">C</div>
+        <div class="art-label label-top">SOUND ON.</div>
+        <div class="art-label label-bottom">WORLD OFF. ✳</div>
+        <span class="art-star star-one">✳</span>
+        <span class="art-star star-two">✦</span>
+        <span class="art-number">001—026</span>
+      </div>
+    </section>
+
+    <div class="ticker">
+      <div class="ticker-track">
+        <span>CRAWLA ✳ COLOR YOUR SOUND ✳ MUSIC FOR YOUR MOOD ✳</span>
+        <span>CRAWLA ✳ COLOR YOUR SOUND ✳ MUSIC FOR YOUR MOOD ✳</span>
+      </div>
+    </div>
+
+    <section class="music-section" id="music">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">01 / THE COLLECTION</p>
+          <h2>YOUR NEXT<br>FAVORITE TRACK.</h2>
+        </div>
+        <p class="section-description">
+          Explore the tracks. Pick your mood. Find your frequency.
+        </p>
+      </div>
+
+      <div class="music-controls">
+        <label class="search-box">
+          <span>⌕</span>
+          <input type="search" id="searchInput" placeholder="Search a track..." aria-label="Search tracks">
+          <kbd>↵</kbd>
+        </label>
+
+        <div class="filter-buttons">
+          <button class="filter active" data-filter="all">ALL</button>
+          <button class="filter" data-filter="chill">CHILL</button>
+          <button class="filter" data-filter="energy">ENERGY</button>
+          <button class="filter" data-filter="late">LATE NIGHT</button>
+        </div>
+      </div>
+
+      <p id="resultCount" class="result-count">6 TRACKS</p>
+
+      <div class="track-grid" id="trackGrid">
+
+        <article class="track-card" data-title="Sayang" data-mood="chill"
+          data-search="sayang crawla fat rorry">
+          <button class="cover cover-coral" data-track="Sayang"
+            aria-label="Open Sayang on Spotify">
+            <span class="cover-index">TRACK / 01</span>
+            <span class="cover-shape shape-circle"></span>
+            <span class="cover-word">SAYANG</span>
+            <span class="cover-play">↗</span>
+          </button>
+          <div class="track-info">
+            <div><h3>Sayang</h3><p>CRAWLA · FAT RORRY</p></div>
+            <span class="track-number">01</span>
+          </div>
+          <button class="text-link" data-track="Sayang">LISTEN ON SPOTIFY ↗</button>
+        </article>
+
+        <article class="track-card" data-title="Hälla" data-mood="late"
+          data-search="hälla halla crawla">
+          <button class="cover cover-blue" data-track="Hälla"
+            aria-label="Open Hälla on Spotify">
+            <span class="cover-index">TRACK / 02</span>
+            <span class="cover-shape shape-lines"></span>
+            <span class="cover-word">HÄLLA</span>
+            <span class="cover-play">↗</span>
+          </button>
+          <div class="track-info">
+            <div><h3>Hälla</h3><p>CRAWLA</p></div>
+            <span class="track-number">02</span>
+          </div>
+          <button class="text-link" data-track="Hälla">LISTEN ON SPOTIFY ↗</button>
+        </article>
+
+        <article class="track-card" data-title="Clos3r" data-mood="energy"
+          data-search="clos3r closer crawla saintsinner">
+          <button class="cover cover-pink" data-track="Clos3r"
+            aria-label="Open Clos3r on Spotify">
+            <span class="cover-index">TRACK / 03</span>
+            <span class="cover-shape shape-cross"></span>
+            <span class="cover-word">CLOS3R</span>
+            <span class="cover-play">↗</span>
+          </button>
+          <div class="track-info">
+            <div><h3>Clos3r</h3><p>CRAWLA · SAINTSINNER</p></div>
+            <span class="track-number">03</span>
+          </div>
+          <button class="text-link" data-track="Clos3r">LISTEN ON SPOTIFY ↗</button>
+        </article>
+
+        <article class="track-card" data-title="Diary" data-mood="late"
+          data-search="diary crawla">
+          <button class="cover cover-lime" data-track="Diary"
+            aria-label="Open Diary on Spotify">
+            <span class="cover-index">TRACK / 04</span>
+            <span class="cover-shape shape-ring"></span>
+            <span class="cover-word">DIARY</span>
+            <span class="cover-play">↗</span>
+          </button>
+          <div class="track-info">
+            <div><h3>Diary</h3><p>CRAWLA</p></div>
+            <span class="track-number">04</span>
+          </div>
+          <button class="text-link" data-track="Diary">LISTEN ON SPOTIFY ↗</button>
+        </article>
+
+        <article class="track-card" data-title="100 Songs" data-mood="chill"
+          data-search="100 songs crawla">
+          <button class="cover cover-cream" data-track="100 Songs"
+            aria-label="Open 100 Songs on Spotify">
+            <span class="cover-index">TRACK / 05</span>
+            <span class="cover-shape shape-circle shape-small"></span>
+            <span class="cover-word">100<br>SONGS</span>
+            <span class="cover-play">↗</span>
+          </button>
+          <div class="track-info">
+            <div><h3>100 Songs</h3><p>CRAWLA</p></div>
+            <span class="track-number">05</span>
+          </div>
+          <button class="text-link" data-track="100 Songs">LISTEN ON SPOTIFY ↗</button>
+        </article>
+
+        <article class="track-card" data-title="Kicau Mania" data-mood="energy"
+          data-search="kicau mania crawla">
+          <button class="cover cover-orange" data-track="Kicau Mania"
+            aria-label="Open Kicau Mania on Spotify">
+            <span class="cover-index">TRACK / 06</span>
+            <span class="cover-shape shape-zigzag"></span>
+            <span class="cover-word">KICAU<br>MANIA</span>
+            <span class="cover-play">↗</span>
+          </button>
+          <div class="track-info">
+            <div><h3>Kicau Mania</h3><p>CRAWLA</p></div>
+            <span class="track-number">06</span>
+          </div>
+          <button class="text-link" data-track="Kicau Mania">LISTEN ON SPOTIFY ↗</button>
+        </article>
+
+      </div>
+
+      <div id="noResults" class="no-results" hidden>
+        <h3>No tracks found.</h3>
+        <p>Try another title or switch the mood filter.</p>
+        <button class="button button-coral" id="resetSearch">RESET SEARCH</button>
+      </div>
+    </section>
+
+    <section class="player-section" id="player">
+      <div class="player-copy">
+        <p class="eyebrow">02 / LISTEN YOUR WAY</p>
+        <h2>PRESS PLAY.<br><span>STAY AWHILE.</span></h2>
+        <p>
+          Paste a Spotify track, album, or playlist link to load the
+          official Spotify player right here.
+        </p>
+        <a href="https://open.spotify.com/search/CRAWLA"
+           target="_blank" rel="noopener noreferrer" class="text-link">
+          FIND CRAWLA ON SPOTIFY ↗
+        </a>
+      </div>
+
+      <div class="player-panel">
+        <div class="player-panel-header">
+          <span>COLORWAVE PLAYER</span>
+          <span class="equalizer"><i></i><i></i><i></i><i></i></span>
+        </div>
+
+        <div class="player-art">
+          <div class="mini-art">C<span>✳</span></div>
+          <div>
+            <p class="mini-label">NOW LOADING</p>
+            <h3 id="playerTitle">Your next favorite.</h3>
+            <p id="playerSubtitle">CRAWLA · SPOTIFY</p>
+          </div>
+        </div>
+
+        <label class="input-label" for="spotifyUrl">SPOTIFY URL</label>
+        <input id="spotifyUrl" class="spotify-input" type="url"
+          placeholder="Paste Spotify link here">
+
+        <button id="loadPlayer" class="button button-blue full-width">
+          LOAD SPOTIFY PLAYER ↗
+        </button>
+
+        <p id="playerMessage" class="player-message" role="status">
+          Player belum dimuat. Masukkan link Spotify dulu.
+        </p>
+
+        <div id="spotifyEmbed" class="spotify-embed" hidden>
+          <iframe id="spotifyFrame" title="Spotify embedded player"
+            src="about:blank" width="100%" height="152"
+            frameborder="0" allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-title">
+        <p class="eyebrow">03 / OUR FREQUENCY</p>
+        <h2>NOT JUST<br>A PLAYLIST<span>.</span></h2>
+      </div>
+      <div class="about-copy">
+        <p>
+          CRAWLA Colorwave is a fan-style music discovery concept
+          built around bold colors, expressive shapes, and music.
+          Find your favorite track, open Spotify, and let the sound
+          set the mood.
+        </p>
+        <button id="surpriseBtn" class="button button-coral">
+          SURPRISE MY MOOD ✳
+        </button>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div>
+        <p class="eyebrow">YOUR DAILY FREQUENCY</p>
+        <h2>WHAT'S YOUR<br>COLOR TODAY?</h2>
+      </div>
+      <div class="mood-buttons">
+        <button data-mood-pick="chill">☁ CHILL</button>
+        <button data-mood-pick="energy">✳ ENERGY</button>
+        <button data-mood-pick="late">☾ LATE NIGHT</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="brand">CRAW<span>LA</span><sup>®</sup></a>
+    <p>COLORWAVE RADIO · FAN-MADE CONCEPT</p>
+    <a href="#home">BACK TO TOP ↑</a>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </body>
-</html>
+      </html>
+              
